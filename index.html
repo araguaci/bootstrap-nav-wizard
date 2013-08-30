@@ -5,7 +5,7 @@
 	<link href="http://getbootstrap.com/assets/css/pygments-manni.css" rel='stylesheet'>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<link href="./dist/bootstrap-wizard.css" rel="stylesheet">
+	<link href="./dist/bootstrap-nav-wizard.css" rel="stylesheet">
 </head>
 <body style="">
 
@@ -13,18 +13,18 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><strong>Bootstrap Wizard Nav</strong></a>
+				<a class="navbar-brand" href="#"><strong>Bootstrap nav-wizard</strong></a>
 			</div>
 		</div>
 	</nav>
 	
 	<div class="container">
 		<div class='page-header'>
-			<h1>Bootstrap Wizard Nav</h1>
+			<h1>Bootstrap nav-wizard</h1>
 		</div>
 
 
-		<p class="lead">This project adds a <code>.nav-wizard</code> CSS class to complement bootstraps OOTB <code>.nav-tabs</code>
+		<p class="lead">This project adds a <code>.nav-wizard</code> CSS class to complement Bootstrap's OOTB <code>.nav-tabs</code>
 			and <code>.nav-pills</code> classes.  It follows the same API as those two classes: you need only set the <code>.active</code> class on the active step, and preceding steps will be styled as complete, while future steps
 			will be styled as not yet completed.</p>
 
@@ -67,12 +67,16 @@
 			</p>
 
 			<h2>Project Info</h2>
+			
+			<p><strong>Homepage</strong>: <a href="https://github.com/LeadDyno/bootstrap-nav-wizard">https://github.com/LeadDyno/bootstrap-nav-wizard</a></p>
 
 			<div class="bs-callout bs-callout-info">
 			      <h4>Project Goals</h4>
 						<ul>
 							<li>Mimic the existing bootstrap nav-* class APIs as closely as possible</li>
 							<li>Provide a pure, dependency-other-than-bootstrap-free LESS/CSS implementation</li>
+							<li>Reasonably flexible for use in either client-side javascript or server-side wizard workflows</li>
+							<li>Approximate the look and feel of the <a href="http://exacttarget.github.io/fuelux/#wizard">Fuel UX</a> wizard classes</li>
 					  </ul>
 			    </div>
 
