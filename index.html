@@ -1,139 +1,89 @@
 <html>
 <head>
 	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/assets/css/docs.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/assets/css/pygments-manni.css" rel='stylesheet'>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<link href="./dist/bootstrap-wizard.css" rel="stylesheet">
 </head>
 <body style="">
 
-<a href="https://github.com/LeadDyno/bootstrap-wizard"><img style="z-index:1001;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-    <div class="navbar navbar-inverse" style="border-radius:0">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Bootstrap Wizard Navigation</a>
-        </div>
-      </div>
-    </div>
+	<a href="https://github.com/LeadDyno/bootstrap-wizard"><img style="z-index:2001;position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><strong>Bootstrap Wizard Nav</strong></a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class='page-header'>
+			<h1>Bootstrap Wizard Nav</h1>
+		</div>
 
-    <div class="container">
-      <div>
-        <h1>Bootstrap Wizard Navigation</h1>
-        <p class="lead">A pure Less/CSS wizard navigation element which behaves like tabs/nav-pills</p>
-      </div>
 
-	    <div class='row'>
-				<h2>Goals</h2>
-				<ul>
-					<li>Identical API to <code>nav-pills</code> and  <code>nav-tabs</code></li>
-					<li>Reasonably flexible for use in either client-side javascript or server-side wizard workflows</li>
-					<li>Pure Less/CSS implementation</li>
-					<li>Look and Feel like the <a href='http://exacttarget.github.io/fuelux/#wizard'>Fuel UX</a> wizard</li>
+		<p class="lead">This project adds a <code>.nav-wizard</code> CSS class to complement bootstraps OOTB <code>.nav-tabs</code>
+			and <code>.nav-pills</code> classes.  It follows the same API as those two classes: you need only set the <code>.active</code> class on the active step, and preceding steps will be styled as complete, while future steps
+			will be styled as not yet completed.</p>
+
+			<h2>Wizard</h2>
+
+			<div class="bs-example">
+				<ul class='nav nav-wizard'>
+					<li><a href='#step1' data-toggle="tab">Step 1 - Completed</a></li>
+					<li class='active'><a href='#step2' data-toggle="tab">Step 2 - Active</a></li>
+					<li><a>Step 3 - Not Yet Reached</a></li>
 				</ul>
-      </div>
-
-	    <div class='row'>
-				<h2>Demo</h2>
-		    <div>
-			    <ul class='nav nav-wizard'>
-				    <li><a href='#step1' data-toggle="tab">Step 1 - Completed</a></li>
-				    <li><a href='#step2' data-toggle="tab">Step 2 - Completed</a></li>
-				    <li class='active'><a href='#step3' data-toggle="tab">Step 3 - Active</a></li>
-				    <li><a>Step 4 - Not Yet Reached</a></li>
-				  </ul>
-				  <hr/>
-					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade" id="step1">
-						  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-						</div>
-						<div class="tab-pane fade" id="step2">
-						  <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-						</div>
-						<div class="tab-pane fade active in" id="step3">
-						  <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-						</div>
-						</div>
+				<hr/>
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade" id="step1">
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+					</div>
+					<div class="tab-pane fade active in" id="step2">
+						<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+					</div>
 				</div>
-		  </div>
+			</div>
+			<div class="highlight">
+				<pre>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">'nav nav-wizard'</span><span class="nt">&gt;</span>
+  <br/>&nbsp;&nbsp;<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">'#step1'</span> <span class="na">data-toggle=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Step 1 - Completed<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<br/>&nbsp;&nbsp;<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">'active'</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">'#step2'</span> <span class="na">data-toggle=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Step 2 - Active<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<br/>&nbsp;&nbsp;<span class="nt">&lt;li&gt;&lt;a&gt;</span>Step 3 - Not Yet Reached<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<br/><span class="nt">&lt;/ul&gt;</span>
+				</pre>
+			</div>			
 
-	    <div class='row'>
-				<h2>CSS</h2>
-		    <div>
-			    <pre>
-ul.nav-wizard {
-  background-color: #f9f9f9;
-  border: 1px solid #d4d4d4;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  *zoom: 1;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-}
-ul.nav-wizard li {
-  position: relative;
-  float: left;
-  height: 46px;
-  display: inline-block;
-  text-align: middle;
-  padding: 0 20px 0 30px;
-  margin: 0;
-  font-size: 16px;
-  line-height: 46px;
-}
-ul.nav-wizard li a {
-  color: #468847;
-  padding: 0;
-}
-ul.nav-wizard li a:hover {
-  background-color: transparent;
-}
-ul.nav-wizard li:before {
-  position: absolute;
-  display: block;
-  border: 24px solid transparent;
-  border-right: 0;
-  border-left: 16px solid #d4d4d4;
-  right: -16px;
-  top: -1px;
-  z-index: 10;
-  content: '';
-}
-ul.nav-wizard li:after {
-  position: absolute;
-  display: block;
-  border: 24px solid transparent;
-  border-right: 0;
-  border-left: 16px solid #f9f9f9;
-  right: -15px;
-  top: -1px;
-  z-index: 11;
-  content: '';
-}
-ul.nav-wizard li.active {
-  color: #3a87ad;
-  background: #f1f6fc;
-}
-ul.nav-wizard li.active:after {
-  border-left: 16px solid #f1f6fc;
-}
-ul.nav-wizard li.active a {
-  color: #3a87ad;
-}
-ul.nav-wizard .active ~ li {
-  background-color: #ededed;
-}
-ul.nav-wizard .active ~ li a {
-  color: gray;
-}
-ul.nav-wizard .active ~ li:after {
-  border-left: 16px solid #ededed;
-}
-				  </pre>
-				</div>
-		  </div>
-		
-    </div>
-</body>
-</html>
+			<h2>Download</h2>
+			<p>The latest CSS code can be found here:</p>
+			<p>
+			<a href='https://github.com/LeadDyno/bootstrap-wizard/blob/master/dist/bootstrap-wizard.css'>https://github.com/LeadDyno/bootstrap-wizard/blob/master/dist/bootstrap-wizard.css</a>
+			</p>
+			<p>The latest LESS code can be found here:</p>
+			<p>
+				<a href='https://github.com/LeadDyno/bootstrap-wizard/blob/master/src/bootstrap-wizard.less'>https://github.com/LeadDyno/bootstrap-wizard/blob/master/dist/bootstrap-wizard.css</a>
+			</p>
+
+			<h2>Project Info</h2>
+
+			<div class="bs-callout bs-callout-info">
+			      <h4>Project Goals</h4>
+						<ul>
+							<li>Mimic the existing bootstrap nav-* class APIs as closely as possible</li>
+							<li>Provide a pure, dependency-other-than-bootstrap-free LESS/CSS implementation</li>
+					  </ul>
+			    </div>
+
+					<div class="bs-callout bs-callout-danger">
+					      <h4>Known Issues</h4>
+								<ul>
+									<li>Needs to scale responsively to mobile</li>
+									<li>Firefox active a-link is styled incorrectly</li>
+							  </ul>
+					    </div>
+
+		</div>
+	</body>
+	</html>
