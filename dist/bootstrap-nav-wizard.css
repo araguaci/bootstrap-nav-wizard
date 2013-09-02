@@ -1,13 +1,10 @@
 ul.nav-wizard {
   background-color: #f9f9f9;
   border: 1px solid #d4d4d4;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   *zoom: 1;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 ul.nav-wizard li {
   position: relative;
@@ -31,40 +28,61 @@ ul.nav-wizard li:before {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-right: 0;
   border-left: 16px solid #d4d4d4;
-  right: -16px;
+  border-right: 0;
   top: -1px;
   z-index: 10;
   content: '';
+  right: -16px;
 }
 ul.nav-wizard li:after {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-right: 0;
   border-left: 16px solid #f9f9f9;
-  right: -15px;
+  border-right: 0;
   top: -1px;
-  z-index: 11;
+  z-index: 10;
   content: '';
+  right: -15px;
 }
 ul.nav-wizard li.active {
   color: #3a87ad;
-  background: #f1f6fc;
+  background: #d9edf7;
 }
 ul.nav-wizard li.active:after {
-  border-left: 16px solid #f1f6fc;
+  border-left: 16px solid #d9edf7;
 }
 ul.nav-wizard li.active a {
   color: #3a87ad;
 }
 ul.nav-wizard .active ~ li {
-  background-color: #ededed;
-}
-ul.nav-wizard .active ~ li a {
-  color: gray;
+  color: #999999;
+  background: #ededed;
 }
 ul.nav-wizard .active ~ li:after {
   border-left: 16px solid #ededed;
+}
+ul.nav-wizard .active ~ li a {
+  color: #999999;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover {
+  color: #468847;
+  background: #f6fbfd;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover:after {
+  border-left: 16px solid #f6fbfd;
+}
+ul.nav-wizard.nav-wizard-backnav li:hover a {
+  color: #468847;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li {
+  color: #999999;
+  background: #ededed;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
+  border-left: 16px solid #ededed;
+}
+ul.nav-wizard.nav-wizard-backnav .active ~ li a {
+  color: #999999;
 }
