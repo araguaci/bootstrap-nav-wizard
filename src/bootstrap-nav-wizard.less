@@ -12,6 +12,7 @@
 
 @incomplete-color : lighten(#000, 60%);
 @incomplete-background : #ededed;
+@row-height: 46px;
 
 //===============================================
 // Mixins
@@ -50,16 +51,42 @@ ul.nav-wizard {
   -moz-border-radius: 6px;
   border-radius: 6px;
   *zoom: 1;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: @row-height;
+    height: @row-height + 1px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    z-index: 11;
+    content: " ";
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 3 * (@row-height);
+    height: @row-height + 1px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    z-index: 11;
+    content: " ";
+  }
   li {
     position: relative;
     float: left;
-    height: 46px;
+    height: @row-height;
     display: inline-block;
     text-align: middle;
     padding: 0 20px 0 30px;
     margin: 0;
     font-size: 16px;
-    line-height: 46px;
+    line-height: @row-height;
     a {
       color: @complete-color;
       padding: 0;
